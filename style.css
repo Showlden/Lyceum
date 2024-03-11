@@ -1,0 +1,131 @@
+header {
+    width: 100%;
+}
+.header__inner {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__menu a {
+    color: var(--red-color);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    background-image: url(./src/assets/imgs/hero.jpg);
+    background-size: cover;
+}
+.hero__inner {
+    width: 60%;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+.hero__inner h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+.hero__line {
+    background-color: var(--red-color);
+    height: 3px;
+    width: 70%;
+}
+.hero__buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero__buttons button {
+    padding: 13px 25px;
+    border-radius: 10px;
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.about-us {
+    width: 100%;
+}
+.about-us__inner {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-us__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+.about-us__content h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.activities {
+    width: 100%;
+}
+.activities__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.activities__inner h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+.activities__inner h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--red-color);
+}
+.activities__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.activities__block {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.activities__block h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--red-color);
+}
+.activities__block h4 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.activities__block p {
+    text-align: left;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 400;
+}
