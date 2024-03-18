@@ -20,6 +20,7 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    outline: none;
   }
   
   button, input {
@@ -48,6 +49,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     background-color: #fff;
+    scroll-behavior: smooth;
   }
   
   body, html, a, button, input, select, textarea {

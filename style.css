@@ -1,22 +1,31 @@
 header {
     width: 100%;
 }
+
 .header__inner {
-    padding: 20px 0;
+    padding: 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__menu {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__menu a {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.header__lang {
+    font-size: 1.2em;
     color: var(--red-color);
-    font-weight: 500;
-    font-size: 18px;
 }
 
 main {
@@ -28,33 +37,38 @@ main {
     background-image: url(./src/assets/imgs/hero.jpg);
     background-size: cover;
 }
+
 .hero__inner {
-    width: 60%;
-    padding: 200px 0;
+    width: 70%;
+    padding: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     gap: 20px;
 }
+
 .hero__inner h1 {
-    font-size: 40px;
+    font-size: 2em;
     font-weight: 700;
     color: #fff;
 }
+
 .hero__line {
     background-color: var(--red-color);
-    height: 3px;
+    height: 0.2em;
     width: 70%;
 }
+
 .hero__buttons {
-    width: 60%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .hero__buttons button {
-    padding: 13px 25px;
+    padding: 0.8em 1.5em;
     border-radius: 10px;
     border: solid 1px #fff;
     color: #fff;
@@ -65,47 +79,60 @@ main {
 .about-us {
     width: 100%;
 }
+
 .about-us__inner {
-    padding: 100px 0;
+    padding: 5% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .about-us__content {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 30px;
+    gap: 1.5em;
 }
-.about-us__content h1 {
-    font-size: 24px;
+
+.about-us__content h2 {
+    font-size: 1.5em;
     font-weight: 500;
 }
+
+
 
 .activities {
     width: 100%;
 }
+
 .activities__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.activities__inner h1 {
-    font-size: 48px;
+
+.activities__inner h2 {
+    font-size: 3em;
     font-weight: 600;
+    color: #000;
 }
+
 .activities__inner h3 {
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 600;
     color: var(--red-color);
 }
+
 .activities__row {
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .activities__block {
     width: 30%;
     display: flex;
@@ -113,19 +140,318 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+    transition: 0.5s;
 }
+
+.activities__block:hover {
+    transform: scale(1.05);
+}
+
+.activities__block img {
+    width: 30vw;
+}
+
 .activities__block h3 {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     color: var(--red-color);
 }
+
 .activities__block h4 {
-    font-size: 28px;
+    font-size: 1.75em;
     font-weight: 600;
 }
+
 .activities__block p {
     text-align: left;
-    line-height: 28px;
-    font-size: 22px;
+    line-height: 1.75em;
+    font-size: 1.375em;
     font-weight: 400;
+}
+
+.activities__button {
+    align-self: flex-start;
+    color: #fff; 
+    font-size: 1.35em;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red-color);
+    padding: 3% 10%; 
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal__content {
+    background-color: #fff;
+    width: 50%;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal__link div {
+    margin-right: 10px;
+}
+
+.modal__link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal__link i {
+    font-size: 1.5rem;
+}
+
+.modal__close {
+    cursor: pointer;
+}
+
+.accordion {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.accordion__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 7px;
+    cursor: pointer;
+    color: var(--red-color); /* Используем ваш красный цвет */
+}
+
+.accordion__content {
+    font-size: 22px;
+    line-height: 29px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+    background-color: #fff;
+}
+
+.accordion__content.active {
+    display: block;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.accordion__line {
+    width: 100%;
+    background-color: var(--red-color); /* Используем ваш красный цвет */
+    height: 3px;
+    border-radius: 7px;
+}
+
+.accordion__arrow {
+    transition: transform 0.3s ease;
+}
+
+.accordion__item.active .accordion__arrow {
+    transform: rotate(45deg);
+}
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.contacts {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.contacts__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts__inner h1 {
+    font-size: 2.375em;
+    color: var(--red-color);
+}
+
+.contacts__row {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__block {
+    gap: 6px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts__block h2 {
+    font-size: 1.75em;
+    font-weight: 500;
+}
+
+.contacts__block h3 {
+    font-size: 1.375em;
+    font-weight: 300;
+}
+
+.address {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.address iframe {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--red-color);
+}
+
+.footer__inner {
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__block {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer__block h1 {
+    color: #AAA8A8;
+    font-size: 2.25em;
+    font-weight: 600;
+}
+
+.footer__socials h1 {
+    color: white;
+    font-size: 2.25em;
+    font-weight: 600;
+}
+
+.footer__networks {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__block h3 {
+    color: var(--grey-color);
+    font-size: 1.375em;
+}
+
+/* Для мобильных устройств и планшетов */
+@media only screen and (max-width: 768px) {
+    .header__menu {
+        width: 70%;
+    }
+    .hero__inner {
+        width: 90%;
+    }
+    .hero__buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .activities__block {
+        width: 90%;
+    }
+    .activities__row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .modal__content {
+        width: 80%;
+    }
+    .accordion__inner {
+        gap: 15px;
+    }
+    .footer__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Для устройств среднего размера (например, планшетов в горизонтальном режиме) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header__menu {
+        width: 60%;
+    }
+    .hero__inner {
+        width: 80%;
+    }
+    .hero__buttons {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .activities__block {
+        width: 45%;
+    }
+    .accordion__inner {
+        gap: 20px;
+    }
+}
+
+/* Для устройств с большим экраном (например, ноутбуков и десктопов) */
+@media only screen and (min-width: 1025px) {
+    .header__menu {
+        width: 50%;
+    }
+    .hero__inner {
+        width: 70%;
+    }
+    .activities__block {
+        width: 30%;
+    }
+    .accordion__inner {
+        gap: 25px;
+    }
 }

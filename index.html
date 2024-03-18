@@ -3,6 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/icons/icon.svg" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    >
+
     <link rel="stylesheet" href="./src/styles/global.css">
     <link rel="stylesheet" href="./src/styles/variables.css">
     <link rel="stylesheet" href="./style.css">
@@ -14,44 +47,63 @@
             <div class="header__inner">
                 <img src="./src/assets/icons/Logo.svg" alt="">
                 <nav class="header__menu">
-                    <a href="">О НАС</a>
-                    <a href="">НАПРАВЛЕНИЯ</a>
-                    <a href="">КАК ПОСТУПИТЬ?</a>
-                    <a href="">КОНТАКТЫ</a>
+                    <a href="#about-us" class="header__link lng-about_us">О НАС</a>
+                    <a href="#activities" class="header__link lng-activities">НАПРАВЛЕНИЯ</a>
+                    <a href="#contacts" class="header__link lng-contacts">КОНТАКТЫ</a>
+                    <a href="#faq" class="header__link lng-faq">FAQ</a>
                 </nav>
-                <img src="./src/assets/icons/Language.svg" alt="">
+                <select name="" id="lang-selector" class="header__lang">
+                    <option value="en" id="lang-en">EN</option>
+                    <option value="ru" id="lang-ru" selected>RU</option>
+                </select>
             </div>
         </div>
-    </header>
+    </header>    
     <main>
         <section class="hero">
             <div class="container">
                 <div class="hero__inner">
-                    <h1>Самый передовой лицей Кыргызстана
-                        Живи для учения, учись для жизни...</h1>
+                    <h1>Самый передовой лицей Кыргызстана. Живи для учения, учись для жизни...</h1>
                     <div class="hero__line"></div>
                     <div class="hero__buttons">
-                        <button>ПРОФЕССИИ БУДУЩЕГО</button>
-                        <button>СВЯЖИТЕСЬ С НАМИ</button>
+                        <a href="#activities"><button class="hero__button">ПРОФЕССИИ БУДУЩЕГО</button></a>
+                        <a href="#contacts"><button class="hero__button">СВЯЖИТЕСЬ С НАМИ</button></a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about-us">
+        <section class="about-us" id="about-us">
             <div class="container">
                 <div class="about-us__inner">
                     <img src="./src/assets/imgs/campus.jpg" alt="">
                     <div class="about-us__content">
-                        <h1>Мы готовим специалистов, способных уверенно принимать решения в условиях быстроменяющегося мира, умеющих креативно мыслить и готовых к вызовам современного рынка труда!</h1>
-                        <h1>Наш лицей имеет всё для комфортного погружения в образовательный процесс. Для всех направлений подготовки имеются специализированные кабинеты и лаборатории.</h1>
+                        <h2>Мы готовим специалистов, способных уверенно принимать решения в условиях быстроменяющегося мира, умеющих креативно мыслить и готовых к вызовам современного рынка труда!</h2>
+                        <h2>Наш лицей имеет всё для комфортного погружения в образовательный процесс. Для всех направлений подготовки имеются специализированные кабинеты и лаборатории.</h2>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="activities">
+        <!-- <section class="lyceum">
+            <div class="container">
+                <div class="lyceum__inner">
+                    <img src="./src/assets/imgs/ph1.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph2.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph3.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph4.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph5.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph6.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph7.jpg" alt="" class="lycem__photo">
+                    <img src="./src/assets/imgs/ph8.jpg" alt="" class="lycem__photo">
+
+                    <div class="prev controlls">&#10094;</div>
+                    <div class="next controlls">&#10095;</div>
+                </div>
+            </div>
+        </section> -->
+        <section class="activities" id="activities">
             <div class="container">
                 <div class="activities__inner">
-                    <h1>Направления</h1>
+                    <h2>Направления</h2>
                     <h3>Длительность обучения 2 года</h3>
                     <div class="activities__row">
                         <div class="activities__block">
@@ -59,23 +111,153 @@
                             <h3>Направление</h3>
                             <h4>Web-программист</h4>
                             <p>Хотите освоить востребованную профессию и построить успешную карьеру в IT? Наша программа предлагает обучение современным технологиям веб-разработки и анализа данных, чтобы вы стали востребованным специалистом с гибкими навыками и знаниями о бизнесе.</p>
+                            <button class="activities__button" id="openModal">Связаться</button>
                         </div>
                         <div class="activities__block">
                             <img src="./src/assets/imgs/sys.jpg" alt="">
                             <h3>Направление</h3>
                             <h4>Системный Администратор</h4>
                             <p>Желаете заняться системным администрированием? Присоединяйтесь к нашей программе обучения, где вы приобретете все необходимые знания и навыки для успешного старта в IT-сфере и обеспечите стабильность работы компьютерных систем.</p>
+                            <button class="activities__button" id="openModal">Связаться</button>
                         </div>
                         <div class="activities__block">
                             <img src="./src/assets/imgs/auto.jpg" alt="">
                             <h3>Направление</h3>
-                            <h4>Авто-Слесарь</h4>
-                            <p>Мечтаете о профессии автослесаря? Наша программа обучения предлагает всестороннее погружение в мир автомобильной техники. Вы научитесь ремонтировать, обслуживать и диагностировать различные типы автомобилей, получив все необходимые знания и навыки для успешной карьеры в этой области.</p>
+                            <h4>Автослесарь</h4>    
+                            <p>Наша программа обучения предлагает всестороннее погружение в мир автомобильной техники. Вы научитесь ремонтировать, обслуживать и диагностировать различные типы автомобилей, получив все необходимые знания и навыки для успешной карьеры в этой области.</p>
+                            <button class="activities__button" id="openModal">Связаться</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+                <span class="modal__close">&times;</span>
+                <div class="modal__link">
+                    <div><i class="fa-light fa-envelope" style="color: #c21010;"></i></div>
+                    <div><a href="https://www.plit99@gmail.com" target="_blank">plit99@gmail.com</a></div>
+                </div>
+                <div class="modal__link">
+                    <div><i class="fa-light fa-phone" style="color: #c21010;"></i></div>
+                    <div><a href="tel:+996709729624">+996 (XXX) XX-XX-XX</a></div>
+                </div>
+                <div class="modal__link">
+                    <div><i class="fa-brands fa-instagram" style="color: #c21010;"></i></div>
+                    <div><a href="https://instagram.com/99litsey">@99litsey</a></div>
+                </div>
+                <div class="modal__link">
+                    <div><i class="fa-brands fa-square-facebook" style="color: #c21010;"></i></div>
+                    <div><a href="">XXXXXX</a></div>
+                </div>
+            </div>
+        </div>
+        <section class="accordion" id="faq">
+            <div class="container">
+                <div class="accordion__inner">
+                    <div class="accordion__line"></div>
+                    <div class="accordion__item">
+                        <div class="accordion__header">Есть ли стипендии или финансовая помощь? <img class="accordion__arrow" src="./src/assets/icons/Add.svg" alt=""></div>
+                        <div class="accordion__content">
+                            <p>Да, в нашем IT лицее есть различные программы стипендий и финансовой помощи.</p>
+                            <p>Для получения подробной информации и консультаций обратитесь в финансовый отдел лицея.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__line"></div>
+                    <div class="accordion__item">
+                        <div class="accordion__header">Какие дополнительные образовательные программы? <img class="accordion__arrow" src="./src/assets/icons/Add.svg" alt=""></div>
+                        <div class="accordion__content">
+                            <p>В нашем IT лицее доступны разнообразные дополнительные образовательные программы для студентов.</p>
+                            <p>Это включает в себя мастер-классы, семинары с ведущими специалистами отрасли, стажировки в ведущих IT компаниях и участие в научно-исследовательских проектах.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__line"></div>
+                    <div class="accordion__item">
+                        <div class="accordion__header">Сколько лет обучения? <img class="accordion__arrow" src="./src/assets/icons/Add.svg" alt=""></div>
+                        <div class="accordion__content">
+                            <p>Продолжительность обучения в нашем IT лицее зависит от выбранной программы.</p>
+                            <p>Обычно стандартная программа обучения рассчитана на 3-4 года для получения полного среднего образования и специализации в области информационных технологий.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__line"></div>
+                    <div class="accordion__item">
+                        <div class="accordion__header">Можно ли работать во время обучения? <img class="accordion__arrow" src="./src/assets/icons/Add.svg" alt=""></div>
+                        <div class="accordion__content">
+                            <p>Да, во время обучения у студентов есть возможность работать на стороне.</p>
+                            <p>Мы сотрудничаем с различными IT компаниями, которые предоставляют студентам возможность стажироваться и получать практический опыт работы в реальных проектах.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__line"></div>
+                    <div class="accordion__item">
+                        <div class="accordion__header">Какой учебный процесс? <img class="accordion__arrow" src="./src/assets/icons/Add.svg" alt=""></div>
+                        <div class="accordion__content">
+                            <p>Учебный процесс в нашем IT лицее основан на современных методах обучения.</p>
+                            <p>Мы проводим интерактивные занятия с использованием современных образовательных технологий и методик.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__line"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__inner">
+                    <h1>Наши контакты</h1>
+                    <div class="contacts__row">
+                        <div class="contacts__block">
+                            <h2>Для обучения</h4>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                        </div>
+                        <div class="contacts__block">
+                            <h2>Для партнерств</h4>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                        </div>
+                        <div class="contacts__block">
+                            <h2>Работай в лицее</h4>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                            <h3>+996 (XXX) XX-XX-XX</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="address">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7675510073736!2d74.62732772350118!3d42.85555584860116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb65041bf6f57%3A0x7073e49841f3d4d1!2z0J_RgNC-0YTQtdGB0YHQuNC-0L3QsNC70YzQvdGL0Lkg0LvQuNGG0LXQuSA5OQ!5e0!3m2!1sru!2skg!4v1710144885932!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer__inner footer__socials">
+                <div class="footer__block">
+                    <h1>Соцсети</h1>
+                    <ul class="footer__networks">
+                        <li><a href="https://www.instagram.com/99litsey?igsh=MXdzN2c2cGVmOW91cg==" target="_blank"><img src="./src/assets/icons/instagram.svg" alt=""></a></li>
+                        <li><a href="https://youtu.be/Sh_o2RhSep8?si=uUK8sCshpACeqRvN" target="_blank"><img src="./src/assets/icons/youtube.svg" alt=""></a></li>
+                        <li><a><img src="./src/assets/icons/facebook.svg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <h1>Направления</h1>
+                    <h3>Веб-программист</h3>
+                    <h3>Авто-слесарь</h3>
+                    <h3>Системный администратор</h3>
+                </div>
+                <div class="footer__block">
+                    <h1>Курсы</h1>
+                    <h3>Backend-разработка</h3>
+                    <h3>Backend-разработка</h3>
+                    <h3>IOS-разработка</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./src/scripts/accordion.js"></script>
+    <script src="./src/scripts/modal.js"></script>
+    <script src="./src/scripts/slider.js"></script>
+    <script src="./src/scripts/translate.js"></script>
 </body>
 </html>
